@@ -1,0 +1,84 @@
+/* Uncle Jim Money — design tokens
+   Source of truth: embedded image #23 of UncleJim_branding.svg (789x789 master).
+   Supersedes board vector #FF7A64 and landing CSS #FF9A8B. */
+
+:root {
+  /* Brand core — measured, not chosen */
+  --uj-coral:      #F4706C;  /* artwork background, 99% of top edge */
+  --uj-ink:        #0D0D1A;  /* beanie + outlines, 31.5% of artwork */
+  --uj-amber:      #EAA156;  /* skin tone, 15.8% */
+  --uj-gold:       #F5BB45;  /* glasses lens */
+  --uj-rose-deep:  #7D4040;  /* stubble shadow, 8.3% */
+
+  /* Coral ramp (accent / interaction states) */
+  --uj-coral-50:  #FEF0EF;
+  --uj-coral-100: #FBD9D7;
+  --uj-coral-200: #F7B4B1;
+  --uj-coral-300: #F5918E;
+  --uj-coral-400: #F4807C;
+  --uj-coral-500: #F4706C;  /* brand */
+  --uj-coral-600: #D9534F;
+  --uj-coral-700: #A83A37;
+  --uj-coral-800: #7D4040;  /* = --uj-rose-deep */
+  --uj-coral-900: #4A1F1F;
+
+  /* Amber/gold ramp (secondary accent, success-leaning) */
+  --uj-gold-100: #FDF0D8;
+  --uj-gold-300: #F8D295;
+  --uj-gold-500: #F5BB45;
+  --uj-gold-700: #C8862A;
+
+  /* Neutrals for the product UI (Up-style light surfaces) */
+  --uj-paper:   #FFFFFF;
+  --uj-surface: #FAF7F5;
+  --uj-line:    #EFE7E4;
+  --uj-muted:   #8A8390;
+  --uj-text:    #0D0D1A;
+
+  /* Semantic */
+  --uj-positive: #1DBF73;
+  --uj-negative: #D9534F;
+  --uj-warning:  #F5BB45;
+  --uj-info:     #EAA156;
+
+  /* Type */
+  --uj-font-display: "Supercharge", "Futura", -apple-system, sans-serif;
+  --uj-font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --uj-titles: var(--uj-font-display);
+  --uj-2xl: 2.5rem; --uj-xl: 2rem; --uj-lg: 1.25rem;
+  --uj-md: 1rem;    --uj-sm: .875rem;
+
+  /* Shape & depth — Up uses generous pill radii */
+  --uj-radius-card: 24px;
+  --uj-radius-pill: 999px;
+  --uj-radius-tile: 14px;
+  --uj-shadow-card: 0 8px 24px rgba(13,13,26,.08);
+  --uj-shadow-float: 0 16px 40px rgba(13,13,26,.14);
+
+  /* Spacing scale */
+  --uj-s1: 4px; --uj-s2: 8px; --uj-s3: 16px;
+  --uj-s4: 24px; --uj-s5: 40px; --uj-s6: 64px; --uj-s7: 96px;
+
+  --uj-maxw: 1200px;
+}
+
+/* Wallet fork override map — replaces shocknet/wallet2 blues with brand tokens.
+   Applied as src/theme/uncle-jim.css imported after variables.css. */
+:root {
+  --ion-color-primary: var(--uj-coral);      /* was #0F4C81 / #2563EB family */
+  --ion-color-primary-rgb: 244,112,108;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-secondary: var(--uj-gold);
+  --ion-color-secondary-rgb: 245,187,69;
+  --ion-color-tertiary: var(--uj-amber);
+  --ion-color-success: var(--uj-positive);
+  --ion-color-warning: var(--uj-gold);
+  --ion-color-danger: var(--uj-coral-600);
+  --ion-color-dark: var(--uj-ink);
+  --ion-color-medium: var(--uj-muted);
+  --ion-color-light: var(--uj-surface);
+  --ion-background-color: var(--uj-paper);
+  --ion-text-color: var(--uj-text);
+  --ion-card-border-radius: var(--uj-radius-card);
+  --ion-border-color: var(--uj-line);
+}
